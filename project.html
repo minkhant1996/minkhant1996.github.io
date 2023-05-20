@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Min Khant Soe">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./static/style.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title> Min Khant Soe </title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class = "logo"><a href = "./">Min Khant Soe</a></div>
+                    <ul class = "links">
+                        <li><a href = "./">HOME</a></li>
+                        <li><a href = "./education">EDUCATION</a></li>
+                        <li><a href = "./experience">EXPERIENCE</a></li>
+                        <li><a class ="active" href = "./project">PROJECTS</a></li>
+                        <li><a href = "./certificate">CERTIFICATES</a></li>
+                        <li><a href = "./contact">CONTACT</a></li>
+                    </ul>
+            </div>
+        </header>
+
+        <section class="project">
+            <h1>Projects</h1>
+            <div class="project-layout">
+
+            <div class="project-topic">
+                <ul>	
+                    <li><b>Computer Vision</b>
+                        <ul>
+                            <li><a href="#Create_3D">3D point clouds model creation</a></li>
+                            <li><a href="#Trench_measurement_system">3D Trench's Profile Measurement</a></li>
+                            <li><a href="#Road_scene_semantic">Road Scene Semantic Segmentation</a></li>
+                            <li><a href="#AR_test">Simple Augmented Reality</a></li>
+                            <li><a href="#Motor_control_CV">Servo Motor Control by hand rotation</a></li>
+                        </ul>
+                    </li>
+
+                    <li><b>Data Modeling and Management</b>
+                        <ul>
+                            <li><a href="#RDBMS">Relational Database Management System (SQL)</a></li>
+                            <li><a href="#NoSQL">Database Management System (NoSQL)</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><b>Generative AI</b></li>
+                        <ul>
+                            <li><a href="#T2CarImg">Text to Car Image Geneartion</a></li>
+                            <li><a href="#T2I_iOS">Text to Image iOS App</a></li>
+                        </ul>
+
+                    <li><b>Machine Learning</b>
+                        <ul>
+                            <li><a href="#BIA">Business intelligence system for Music Streaming Platform</a></li>
+                            <li><a href="#Yoga_pose">Yoga pose classification</a></li>
+                            <li><a href="#EEG">Brain channel region classification</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><b>Natural Language Processing</b>
+                        <ul>
+                            <li><a href="#customer_intent">Customer intention detection system</a></li>
+                            <li><a href="#QandA_covid">Question Answering System</a></li>
+                        </ul>
+                    </li>
+
+                    <li><b>Mechatronics</b>
+                        <ul>
+                            <li><a href="#auto_transport">Automatic Transport Vehicle</a></li>
+                            <li><a href="#auto_coin_sort">Automatic Coin Sorting Machine</a></li>
+                            <li><a href="#senior_proj">Intermediate Model-Based Design Training Program with VCU using MPC5744P</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class = "project-content">
+                <script src="project.js"></script>
+
+                <section id="Nothing">
+                  <!-- <h2></h2> -->
+                  <p> I have experience in area of computer vision, data modelling and management, generative AI, machine learning, 
+                    natural language Processing and automation.
+                  </p>
+                </section>
+
+                <section id="Create_3D">
+                    <h2>3D point clouds model creation with OpenSfM</h2>
+                    <p>
+                      This is a part of trench's profile measurement, I created <b>3D point clouds model of trenches</b>. First, I <b>captured a video</b> of a trench. 
+                      Next, I <b>calibrated the camera</b> and <b>generated the images</b> from the video I collected with OpenCV Python.
+                      Then, I manually <b>selected the key frames</b>. 
+                      After that, I <b>undistorted the key frames</b> with OpenCV Python lib and saved the results images.
+                      In config file of OpenSfM, I set <b>depthmap_min_consistent_views</b> parameter to 6. 
+                      Lastly, I loaded those undistorted key frames to OpenSfM and created 3D point clouds model of the trench.
+                    </p>
+                    <p>
+                      "The depthmap_min_consistent_views parameter specifies the minimum number of images in which a particular point should be 
+                      visible in order to consider it as a consistent point and estimate its depth. If the number of 
+                      consistent views for a point is below this threshold, the point may be considered unreliable or 
+                      not visible enough to estimate its depth accurately."
+                    </p>
+                    <p>
+                        Project Link: 
+                        <a href = "https://github.com/minkhant1996/Trench-Profile-Measurement-with-3D-point-clouds/blob/main/Water%20Pipe%20Trench%20Profile%20Analysis%20with%203D%20point%20cloud.pdf">
+                            3D point clouds model creation with OpenSfM
+                        </a>
+                    </p>
+                </section>
+
+                <section id="Trench_measurement_system">
+                  <h2>3D Trench's Profile Measurement</h2>
+                  <p> 
+                    In this project, I measured Trench's profile. To capture the necessary data, 
+                    I used 2 different 3D point cloud models for same trench using two cutting-edge techniques: 3D point cloud modeling with <b>OpenSfM</b> and data acquisition with the highly capable 
+                    <b>Intel Realsense D455</b> camera. First, I <b>implmented a measurement algorithm</b> with Python. Then, I analyzed and measured 3D trench's profile with 2 different 
+                    measurement techniques: my measurement algorithm and <b>MeshLab</b> software. Based on the findings, the performance of my measurement algorithm is on par with that of MeshLab, 
+                    a widely recognized software tool. The results obtained through my algorithm demonstrate its ability to deliver accurate and reliable measurements comparable 
+                    to those achieved using MeshLab. This highlights the effectiveness and reliability of my algorithm in capturing and analyzing data, showcasing its potential as a valuable alternative in the field of measurement analysis.
+                  </p>
+                  <p>
+                    The processes for <b>measurement algorithm</b> are as follow. 
+                    <ul>
+                        <li>3D point clouds models.</li>
+                        <li>Remove outliers with statistical outlier removal.</li>
+                        <li>Create bounding box of 3D trench.</li>
+                        <li>Rotate 3D trench to be fit in bounding box.</li>
+                        <li>Crop a section of 3D trench to measure.</li>
+                        <li>Save the cropped 3D trench for later use.</li>
+                        <li>Draw bounding box for the cropped 3D trench.</li>
+                        <li>Measure 3D trench's profile with bounding box dimensions.</li>
+                    </ul>
+                  </p>
+                  <p>
+                    The processes for <b>MeshLab</b> measurement are as follow. 
+                    <ul>
+                        <li>Import the cropped 3D trench to MeshLab.</li>
+                        <li>Measure 3D trench's profile by manually selecting two points on 3D trench.</li>
+                    </ul>
+                  </p>
+                  <p>
+                    Project Link: 
+                    <a href = "https://github.com/minkhant1996/Trench-Profile-Measurement-with-3D-point-clouds/blob/main/Water%20Pipe%20Trench%20Profile%20Analysis%20with%203D%20point%20cloud.pdf">
+                        3D Trench's Profile Measurement
+                    </a>
+                </p>
+                </section>
+
+                <section id="Road_scene_semantic">
+                    <h2>Road Scene Semantic Segmentation</h2>
+                    <p>
+                      In this project, I trained a <b>UNet</b> Model for road scene understanding. <b>Resnet101</b> is used as enconder and <b>ImageNet</b> pretrained is used as encoder weight. 
+                      I combined <b>3 different datasets</b>: Mapillary Vistas Dataset, 
+                      Dataset collected by AICenter, Asian Institute of Technology, and Dataset collected by me in Carla simulator. 
+                      The whole dataset has total of <b>25200 training images</b> and <b>4850 validation images</b>. 
+                      During the trained, the <b>images are augmented</b> with probability of 0.5 in each occurance; augmentation methods include horizontal or vertical flipping, 
+                      random cropping, RGB shifting, gaussian noise, random rotation, random brightness contrast.
+                      The model is trained with <b>256 x 192</b> image size with <b>batch size 32</b>. 
+                      <b>Adam Optimizer with weight decay</b> is used during the training.
+                      The best <b>validation IoU score</b> achieve is <b>0.772</b>.
+                    </p>
+                    <p>
+                        Record videos during realtime testing on the real road: 
+                        <a href = 
+                        "https://drive.google.com/drive/folders/1aGdKr6GjkwgbPY8v2WG83C7WxVo0YHli?usp=sharing">
+                        Road Scene Semantic Segmentation
+                        </a>
+                    </p>
+                </section>
+
+                <section id="AR_test">
+                    <h2>Simple Augmented Reality</h2>
+                    <p>
+                        This project served as a valuable learning experience for me to delve into the world of <b>augmented reality (AR) using aruco cards</b>. 
+                        Leveraging cutting-edge technologies, I employed <b>Mediapipe</b>, a powerful tool for hand and joint detection, along with <b>OpenCV</b> 
+                        to utilize my webcam. By strategically attaching aruco cards to the detected joints through Mediapipe, I was able to overlay captivating 
+                        AR content onto the cards. 
+                        In addition to its role in aligning AR objects with the aruco cards, <b>Homography</b> was also employed to facilitate image transformations 
+                        and reshape the appearance of my AR objects. 
+                        The combination of these techniques enabled me to create an immersive AR experience with precise object placement and realistic visual effects.
+                    </p>
+                    <p>
+                        Record video during realtime testing:
+                        <a href = 
+                        "https://www.youtube.com/watch?v=w_8OCaK0OIM&ab_channel=MinKhantSoe">
+                        Simple Augmented Reality
+                        </a>
+                    </p>
+                </section>
+
+                <section id="Motor_control_CV">
+                    <h2>Servo Motor Control by hand rotation</h2>
+                    <p>
+                        This project was specifically designed as a library to be utilized in an IoT course at KiddeeLab Training School. 
+                        Its main focus involved the development of an <b>innovative algorithm that harnesses the power of computer vision 
+                        to control the angles of two servo motors</b>. In this project, <b>OpenCV</b> is used to access webcam and <b>Mediapipe</b> is used to detect tha hands.
+                        Motor 1 is controlled by the movements of the right hand, while Motor 2 responds to the gestures of the left hand. 
+                        This intuitive control mechanism adds a dynamic and interactive element to the project.
+
+                        Additionally, I created a user-friendly web interface using <b>FastAPI</b>, Python's high-performance web framework, along with <b>HTML</b> 
+                        and <b>CSS</b>. 
+                        This web interface allows for real-time data updates, eliminating the need for image display in certain scenarios. 
+                        This feature enhances the overall efficiency and responsiveness of the system.
+                    </p>
+                    <p>
+                        The versatility of this project extends beyond its immediate application, as it can be seamlessly integrated into various IoT projects. 
+                        For instance, it can serve as a foundation for robotic applications that incorporate IoT devices like ESP32, ESP8266, and others. 
+                        This flexibility opens up numerous possibilities for expanding the functionality and practicality of the project 
+                        in diverse IoT-based applications.
+                    </p>
+                    <p>
+                        Record video during realtime testing:
+                        <a href = 
+                        "https://www.youtube.com/watch?v=vK46Y23xYaA&ab_channel=MinKhantSoe">
+                        Servo Motor Control by hand rotation
+                    </a>
+                    </p>
+                </section>
+
+                <section id="RDBMS">
+                    <h2>Relational Database Management System (SQL)</h2>
+                    <p>
+                        As part of the Data Modelling and Management class in our Master's study, our team undertook a project to develop <b>a 
+                        comprehensive database management system for a COVID healthcare service</b>. The aim was to create a system that could be 
+                        utilized in hospital projects to streamline various aspects of healthcare services.
+
+                        To begin, we <b>established the business rules</b>, defining the roles and permissions for different user types such as admins, 
+                        doctors, and patients. Our system allowed patients to check the availability and schedule of specific doctors, make appointments, 
+                        and view payment receipts. Doctors, on the other hand, could generate consultation summary reports, modify their availability, 
+                        and manage their schedules.
+
+                        We carefully <b>designed the database to incorporate the necessary data constraints and ensure data integrity</b>. 
+                        The database encompassed user information, patient details, doctor profiles, medicine information, doctor work schedules, 
+                        appointment information, consultation details, and payment records for both consultations and medicines.
+                    </p>
+                    <p>
+                        To showcase our expertise in data modeling, we created <b>the conceptual design</b>, <b>logical design</b>, and established <b>data dictionaries</b>. 
+                        These artifacts served as blueprints for the database structure and relationships.
+
+                        To demonstrate our proficiency in data management, we <b>created mock data online</b>. 
+                        Once the mock data was generated, we proceeded to <b>load it into the MySQL database</b>. 
+                        We extracted meaningful insights by formulating various <b>SQL queries</b>. 
+                        Additionally, we <b>performed operations</b> such as user registration, appointment scheduling, and updating work schedules, 
+                        among others, to simulate real-world scenarios.
+
+                        Throughout the project, we conducted <b>27 data inquiries</b>, recording and analyzing the results to showcase the functionality 
+                        and performance of our system during project presentations.
+                    </p>
+
+                    <p> 
+                        This project <b>demonstrated our proficiency in applying data modeling and management principles to healthcare services using SQL databases</b>. 
+                        We effectively managed and stored diverse healthcare data, enabling streamlined operations and data-driven decision-making. 
+                        Our focus on data privacy and security ensured the confidentiality of sensitive healthcare information. 
+                        Overall, this project laid a solid foundation for improving healthcare operations through efficient data management.
+                    </p>
+
+                    <p>
+                        Project Prsentation Slide:
+                        <a href = 
+                        "https://github.com/minkhant1996/DMM/blob/main/G8_Online%20Healthcare%20Service_SQL.pdf">
+                        Relational Database Management System (SQL) Slides
+                    </a>
+                    </p>
+                    <p>
+                        Project Presentation Record Video:
+                        <a href = 
+                        "https://www.youtube.com/watch?v=v7fXNvTsFyg&ab_channel=MinKhantSoe">
+                        Relational Database Management System (SQL) Video
+                    </a>
+                    </p>
+                </section>
+
+                <section id="NoSQL">
+                    <h2>Database Management System (NoSQL)</h2>
+                    <p>
+                        As part of the Data Modelling and Management class in our Master's study, our team undertook a project to develop <b>a 
+                        comprehensive database management system for a COVID healthcare service</b>. The aim was to create a system that could be 
+                        utilized in hospital projects to streamline various aspects of healthcare services.
+
+                        To begin, we <b>established the business rules</b>, defining the roles and permissions for different user types such as admins, 
+                        doctors, and patients. Our system allowed patients to check the availability and schedule of specific doctors, make appointments, 
+                        and view payment receipts. Doctors, on the other hand, could generate consultation summary reports, modify their availability, 
+                        and manage their schedules.
+
+                        We carefully <b>designed the database to incorporate the necessary data constraints and ensure data integrity</b>. 
+                        The database encompassed user information, patient details, doctor profiles, medicine information, doctor work schedules, 
+                        appointment information, consultation details, and payment records for both consultations and medicines.
+                    </p>
+                    <p>
+                        To showcase our expertise in data modeling, we created <b>the document model design</b>, <b>graph model design</b>.
+                        These artifacts served as blueprints for the database structure and relationships.
+
+                        To demonstrate our proficiency in data management, we <b>created mock data online</b>. 
+                        Once the mock data was generated, we proceeded to <b>load it into the MongoDB for document model and Neo4j for graph model</b>. 
+
+                        We extracted meaningful insights by formulating various <b>MongoDB</b> and <b>Cypher queries</b>. 
+                        Additionally, we <b>performed operations</b> such as user registration, appointment scheduling, and updating work schedules, 
+                        among others, to simulate real-world scenarios.
+
+                        Throughout the project, we conducted <b>25 data inquiries for document model</b> and <b>24 data inquiries for graph model</b>, recording and analyzing the results to showcase the functionality 
+                        and performance of our system during project presentations.
+                    </p>
+
+                    <p> 
+                        This project <b>demonstrated our proficiency in applying data modeling and management principles to healthcare services using NoSQL databases</b>. 
+                        We effectively managed and stored diverse healthcare data, enabling streamlined operations and data-driven decision-making. 
+                        Our focus on data privacy and security ensured the confidentiality of sensitive healthcare information. 
+                        Overall, this project laid a solid foundation for improving healthcare operations through efficient data management.
+                    </p>
+                    <p>
+                        Project Prsentation Slide:
+                        <a href = 
+                        "https://github.com/minkhant1996/DMM/blob/main/G8_Online%20Healthcare%20Service_NoSQL.pdf">
+                        Database Management System (NoSQL) Slides
+                    </a>
+                    </p>
+                    <p>
+                        Project Presentation Record Video:
+                        <a href = 
+                        "https://www.youtube.com/watch?v=SG19ILjKQNw&t=0s&ab_channel=MinKhantSoe">
+                        Database Management System (NoSQL)Video
+                    </a>
+                    </p>
+                </section>
+
+
+                <section id="Yoga_pose">
+                    <h2>Yoga pose classification</h2>
+                    <p>
+                        My team and I undertook this project as part of our Machine Learning class at the Asian Institute of Technology. 
+                        The primary objective was to develop a robust system for recognizing and classifying <b>five different yoga poses</b>: "Cobra," "DownDog," 
+                        "Standing Forward Bend," "Tree," and "Warrior 1." To create a comprehensive dataset, we collected videos of these poses from 
+                        two experienced yoga practitioners and several individuals from our AIT community. 
+                        In total, we obtained <b>30 videos for each pose</b>, ensuring diverse and representative samples.
+                    </p>
+                    <p>
+                        To preprocess the videos and extract the necessary information for classification, we utilized <b>OpenCV</b> and <b>Mediapipe</b>. 
+                        The Mediapipe library proved invaluable in accurately detecting the key joints or keypoints of the human poses in each frame of the videos. 
+                        By saving the images with keyframes for <b>five sequential frames</b> 
+                        we established a solid foundation for further analysis and training.
+                    </p>
+                    <p>
+                        For the classification task, we implemented a <b>Long Short-Term Memory (LSTM) model</b>, a type of recurrent neural network (RNN) known 
+                        for its ability to effectively capture temporal dependencies in sequential data. Through extensive training and validation, we achieved 
+                        an impressive <b>validation score of 94 percent</b>, 
+                        indicating the model's high accuracy and proficiency in distinguishing between the different yoga poses.
+                    </p>
+                    <p>
+                        Overall, this project demonstrates our team's successful application of machine learning techniques to create a robust system 
+                        for yoga pose classification. The utilization of OpenCV, Mediapipe, and LSTM models enabled us to preprocess the videos, extract meaningful 
+                        features, and train a powerful classifier, 
+                        ultimately providing accurate recognition and classification of yoga poses.
+                    </p>
+                    <p>
+                        Project Prsentation Slides:
+                        <a href = 
+                        "https://github.com/minkhant1996/Yoga-Pose-Classification-with-Video-Dataset-/blob/main/Yoga_Pose_Classification.pdf">
+                        Yoga pose classification Slides
+                    </a>
+                    </p>
+                    <p>
+                        Project Report Paper:
+                        <a href = 
+                        "https://github.com/minkhant1996/Yoga-Pose-Classification-with-Video-Dataset-/blob/main/Yoga%20Pose%20Classification%20Using%20LSTM%20Architecture.pdf">
+                        Yoga pose classification Paper
+                    </a>
+                    </p>
+                </section>
+
+                <section id="T2CarImg">
+                    <h2>Text to Car Image Geneartion</h2>
+                    <p>
+                        This project was undertaken as part of the Recent Trend in Machine Learning course at the Asian Institute of Technology. 
+                        Our team explored the application of <b>Semantic-Spatial Aware GAN</b>, a novel architecture that combines an <b>Inception v3 image encoder</b> 
+                        with a <b>bi-directional LSTM text encoder</b>.
+
+                        To accommodate our server's GPU memory limitations, we made modifications to the architecture by reducing the number of layers. 
+                        This adjustment allowed us to effectively train the model within the available resources. For the dataset, we acquired <b>a car image 
+                        dataset from Kaggle</b>, which served as the foundation for our experiments.
+
+                        In order to create a comprehensive and targeted training dataset, we manually selected specific car companies and their corresponding 
+                        car models. We <b></b>curated a text dataset</b> that included descriptions and attributes for these cars, providing the necessary textual context 
+                        for the GAN model. Additionally, we conducted experiments using <b>BERT as a text encoder</b> to compare its performance with the LSTM text 
+                        encoder.
+                    </p>
+                    <p>
+                        Throughout the training process, we fine-tuned hyperparameters and carefully monitored the model's progress. 
+                        This iterative approach allowed us to optimize the performance and enhance the quality of the generated outputs.
+                    </p>
+                    <p>
+                        By leveraging the original architecture without modifications, our project was able to achieve commendable results. 
+                        The chosen architecture evidently possessed inherent capabilities that aligned well with our task, contributing to the positive outcome we obtained.
+                        However, in retrospect, we realize that further improvements could have been made. A key realization is the significance of focusing more on training, 
+                        adopting a data-centric approach. At the time of our project, we may not have been fully aware of the extent to which training affects model performance. 
+                        With this newfound understanding, we recognize the importance of dedicating more attention to the training phase.
+                    </p>
+                    <p>
+                        Enhancing the training process involves several strategies that can positively impact the models. 
+                        These include employing advanced data augmentation techniques, fine-tuning hyperparameters, and optimizing the model's architecture. 
+                        By investing additional effort into improving and diversifying our training dataset, we have the potential to unlock 
+                        higher levels of performance and accuracy in our models.
+                        While it is natural to gain insights and refine our understanding after completing a project, it is crucial to acknowledge the achievements made at the time. 
+                        By recognizing the areas where further improvements could be made, particularly through a data-centric approach to training, we have identified valuable 
+                        opportunities for future research and development in the field of machine learning.
+                    </p>
+
+                    <p>
+                        Project Report Paper:
+                        <a href = 
+                        "https://github.com/minkhant1996/Text-to-Image-Generation-with-GAN/blob/main/Text_to_Image_Generation_with_Semantic_Spatial_Aware_GAN_and_BERT.pdf">
+                        Text to Car Image Geneartion
+                    </a>
+                    </p>
+                </section>
+
+                <section id="T2I_iOS">
+                    <h2>Text to Image iOS App</h2>
+                    <p>
+                        In this project, for the image generation component, I implemented the use of Python as the programming language. To generate the images from text input, 
+                        I utilized the <b>stable diffusion</b> model developed by <b>Stability AI</b>, which is available on <b>the Hugging Face model repository</b>. 
+                        After downloading the pre-trained model, I harnessed its capabilities to generate images based on the provided text input.
+
+                        To ensure accessibility and availability of the image generation functionality, I hosted the <b>Python API code</b> on the <b>Google Cloud Platform</b>. 
+                        By leveraging the cloud infrastructure, users can access and utilize the image generation service from anywhere, providing 
+                        a seamless and convenient experience.
+
+                        Hosting the Python API code on the Google Cloud Platform not only ensures easy accessibility but also allows for <b>scalability 
+                        and reliability</b>. Users can take advantage of the platform's resources to handle requests and process image generation efficiently, 
+                        providing a robust and responsive experience.
+
+                        By combining the stable diffusion model from Stability AI, the power of Python, and the scalability of the Google Cloud Platform, 
+                        I was able to create an image generation system that delivers high-quality results based on text input, accessible from anywhere 
+                        via the hosted Python API code.
+                    </p>
+                    <p>
+                        To develop the iOS app, I employed <b>Swift</b>. Within the <b>iOS app</b>, I integrated <b>three user inputs</b>: text prompt, image style, and image size.
+                        This allowed users to customize their generated images according to their preferences. To optimize the user experience, 
+                        I implemented a functionality that only enables the <b>"generate" button</b> when there is text input. 
+                        If no text input is provided, the button appears grayed out and remains unclickable.
+                        
+                        To provide visual feedback to the user during the image generation process, I incorporated <b>an icon that indicates the ongoing progress</b>. 
+                        This feature allows users to easily track the status of the image generation.
+                        
+                        Furthermore, I included a <b>"download" button</b> within the app to enable users to save and download the generated images. Unfortunately, 
+                        deploying the app to iOS requires a paid developer account. As a result, I shared my test record on a virtual macOS environment. 
+                        For your convenience, I have provided testing videos for your reference. You can access them through the link provided below.
+                    </p>
+
+                    <p>
+                        Record videos during realtime testing:
+                        <a href = 
+                        "https://drive.google.com/drive/folders/1qTLYDHpRH4ICqNUnflk4TQQmyP5Qftyx">
+                        Text to Image iOS App
+                    </a>
+                    </p>
+                </section>
+
+                <section id="customer_intent">
+                    <h2>Customer intention detection system</h2>
+                    <p>
+                        This project, conducted as part of the Natural Language Understanding class in my Master's study, 
+                        <b>focused on exploring intent detection using transformers</b>. 
+                        Specifically, our team utilized the <b>RoBERTa</b> and <b>XLNET</b> transformers from <b>the Hugging Face</b> library to perform the task.
+
+                        To train the models, we employed <b>the banking 77 dataset</b> and compared the results obtained from each transformer. 
+                        In addition, we investigated <b>the impact of different loss functions</b> on intent detection performance. Specifically, 
+                        we trained the models using both <b>cross entropy loss alone</b> and <b>cross entropy loss combined with supervised contrastive learning loss</b>. 
+                        This allowed us to assess the usefulness of these loss functions in the intent detection task.
+
+                        Throughout the training process, we employed the <b>Adam optimizer with weight decay</b> to optimize the models. 
+                        Due to time constraints, we could only train the models for a few epochs. Although the obtained results may not be applicable 
+                        in real-world applications, they were sufficient for comparison purposes.
+                    </p>
+
+                    <p>
+                        Our findings revealed that <b>RoBERTa outperformed XLNET</b> in terms of intent detection performance. Moreover, 
+                        we observed that <b>combining the cross entropy loss with supervised contrastive learning loss led to higher validation scores</b> 
+                        compared to using cross entropy loss alone. This indicates that the inclusion of supervised contrastive learning loss was 
+                        beneficial for improving the intent detection capabilities of the models.
+
+                        While the obtained results may have limitations due to the limited training duration, they provided valuable insights into 
+                        the performance of RoBERTa and XLNET transformers in intent detection tasks. Additionally, our exploration of different 
+                        loss functions shed light on their potential impact on model performance.
+
+                        Overall, this project contributed to our understanding of intent detection using transformers and provided a foundation 
+                        for further research and improvements in this area.
+                    </p>
+
+                    <p>
+                        Project Prsentation Slides:
+                        <a href = 
+                        "https://github.com/minkhant1996/NLP/blob/main/NLP_Project.pdf">
+                        Customer intention detection system
+                    </a>
+                    </p>
+                </section>
+
+                <section id="QandA_covid">
+                    <h2>Question Answering System</h2>
+                    <p>
+                        During the Natural Language Understanding class in my Master's study, our team undertook a project centered around <b>developing a 
+                        Question Answering (QA) system using transformers</b>. We specifically leveraged the <b>RoBERTa</b> and <b>DistilBERT</b> transformers from the 
+                        <b>Hugging Face</b> library for this task.
+
+                        Our focus was on implementing a <b>closed domain and extractive QA approaches</b>.  
+                        In a <b>closed domain QA approach</b>, the system is designed to answer questions within a specific predefined domain or topic.
+                        <b>Extractive QA</b> focuses on extracting the answer directly from a given text or set of documents.
+
+                        To train and evaluate our models, we employed a <b>COVID QA dataset</b> that was relevant to the domain we were working with. 
+                        Throughout the training process, we employed the <b>Adam optimizer with weight decay</b> to optimize the models. 
+                        Due to time constraints, we could only train the models for a few epochs. Although the obtained results may not be applicable 
+                        in real-world applications, they were sufficient for comparison purposes.
+                    </p>
+
+                    <p>
+                        After conducting experiments and evaluating the performance of the models, we observed that <b>DistilBERT outperformed RoBERTa</b> in 
+                        the context of our QA system. DistilBERT demonstrated superior capabilities in accurately answering questions from the given dataset.
+
+                        These findings indicate the effectiveness of DistilBERT as a transformer model for question answering tasks. However, 
+                        it's important to note that <b>the performance comparison may vary depending on the specific dataset</b>, domain, and evaluation metrics used.
+
+                        By successfully implementing and comparing these transformers in the context of QA, our team gained valuable insights 
+                        into their strengths and suitability for this task. This project contributed to our understanding of how transformers can 
+                        be utilized in Natural Language Understanding applications, specifically in the domain of Question Answering.
+                    </p>
+
+                    <p>
+                        Project Prsentation Slides:
+                        <a href = 
+                        "https://github.com/minkhant1996/NLP/blob/main/NLP_Project.pdf">
+                        Question Answering System
+                    </a>
+                    </p>
+                </section>
+
+                <section id="EEG">
+                    <h2>Brain channel region classification</h2>
+                    <p>
+                        In this project, our team focused on the <b>implementation of various machine learning algorithms</b> for <b>the classification of 
+                        P300-based Brain-Computer Interface (BCI) datasets</b>. We aimed to compare their classification results and evaluate their performance 
+                        in different scenarios.
+
+                        For the <b>classification task</b>, we considered <b>specific scenarios</b> such as training on one subject and testing on another subject, 
+                        subject-specific classification, and regional channel classification. The <b>dataset was divided into different regions</b>, including 
+                        the frontal, central, parietal, occipital, and temporal regions.
+                    </p>
+                    <p>
+                        To address this classification task, we implemented <b>three different algorithms</b>: BN3, BN3+LSTM, and CNN Conv2D. 
+                        These algorithms were selected due to their effectiveness in handling temporal and spatial features present in the BCI data.
+
+                        <b>BN3 (BrainNetCNN)</b> is a convolutional neural network architecture specifically designed for BCI applications. 
+                        It utilizes deep learning techniques to capture complex patterns and spatial dependencies in the data.
+
+                        <b>BN3+LSTM</b> combines the BN3 architecture with a Long Short-Term Memory (LSTM) layer. The LSTM layer is capable of capturing temporal 
+                        dependencies, making it suitable for analyzing sequential data.
+
+                        <b>CNN Conv2D (Convolutional Neural Network with 2D convolutions)</b> is a well-known deep learning architecture that has proven effective 
+                        in various image classification tasks. By applying 2D convolutions to the BCI data, this algorithm can extract relevant spatial features.
+                    </p>
+                    
+                    <p>
+                        In the <b>subject-specific task</b>, we found that the CNN (Conv2D) algorithm achieved the highest accuracy of 92.46%. 
+                        This indicates that the Conv2D architecture effectively 
+                        captured the spatial features and patterns in the BCI data, resulting in accurate subject-specific classification.
+
+                        For <b>the train on one subject and test on another subject task</b>, the CNN (Conv2D) algorithm also performed exceptionally well, 
+                        achieving an accuracy of 91.35%. 
+                        This result demonstrates the generalizability of the Conv2D model across different subjects, indicating its robustness 
+                        in capturing relevant patterns in the BCI data.
+
+                        In <b>the channel region task</b>, the BN3 model exhibited the highest accuracy among the three implemented models. 
+                        This suggests that the BN3 architecture, specifically designed for BCI applications, 
+                        successfully captured the unique characteristics and patterns present in the different channel regions of the BCI data.
+                    </p>
+
+                    <p>
+                        These findings highlight the <b>effectiveness of the CNN (Conv2D) algorithm for subject-specific and cross-subject classification tasks</b>, 
+                        while the <b>BN3 model excelled in the channel region classification</b>. By comparing and evaluating the performance of these algorithms, 
+                        our team gained valuable insights into their strengths and suitability for different classification scenarios within the P300-based 
+                        BCI dataset.
+
+                        These results contribute to the advancement of BCI research and provide a foundation for further exploration and development of 
+                        machine learning techniques in the field of brain-computer interfaces.
+
+                        This project showcases our team's efforts to explore machine learning algorithms and their application in the analysis of P300-based 
+                        BCI datasets. Through our work, 
+                        we aimed to contribute to the field of brain-computer interfaces and advance the understanding and utilization of such technologies.
+                    </p>
+
+                    <p>
+                        Project Prsentation Slides:
+                        <a href = 
+                        "file:///home/min/Downloads/CP%20Project.pptx.pdf">
+                        Brain channel region classification Slides
+                    </a>
+                    </p>
+                </section>
+
+                <section id="BIA">
+                    <h2>Business intelligence system for Music Streaming Platform</h2>
+                    <p>
+                        In this project, we created a business intelligence system for a music streaming platform. We used two datasets of KKBox music 
+                        streaming service from Kaggle: 
+                        <a href = 
+                        "https://www.kaggle.com/c/kkbox-music-recommendation-challenge">
+                        WSDM - KKBox's Music Recommendation Challenge</a> 
+                        and 
+                        <a href = 
+                        "https://www.kaggle.com/c/kkbox-churn-prediction-challenge/data?select=members_v3.csv.7z">
+                        WSDM - KKBox's Churn Prediction Challenge</a>.
+                    
+                        In our project, we employed Tableau to <b>create insightful dashboards for data analysis</b>. To accomplish this, 
+                        we utilized <b>five CSV files</b>: 
+                        user information, transaction information, user and song relation information, song information, and song extra information. 
+                        We imported these datasets into Tableau and established connections between them.
+
+                        Firstly, we linked <b>the user information, transaction information, and user and song relation information</b> based on their corresponding 
+                        user IDs. This integration allowed us to gain a comprehensive understanding of user behavior and transaction history.
+
+                        Next, we linked <b>the user and song relation information, song information, and song extra information</b> using song IDs. 
+                        By establishing these connections, we were able to explore the relationship between users, songs, and additional details related 
+                        to the songs.
+                    </p>
+                    <p>
+                        Based on these integrated datasets, for the company, we created <b>various dashboards to provide valuable insights and support decision-making processes</b>. 
+                        For example, we developed a customer demographic dashboard, a subscription sales performance dashboard, and a top songs/artist and 
+                        genre dashboard. These dashboards enabled the company to analyze data, improve sales strategies, and make informed marketing decisions.
+
+                        Moreover, we designed <b>individualized dashboards for each user</b>, allowing them to view their most listened-to song genres, popular songs, 
+                        and top artists on the platform. Additionally, we created <b>artist-specific dashboards</b> that provided artists with valuable insights, 
+                        such as their top songs, most listened-to tracks, and popular song genres.
+
+                        By leveraging Tableau's visualization capabilities and our comprehensive dataset, we were able to create impactful dashboards that 
+                        empowered the company and its users to make data-driven decisions, optimize marketing strategies, and enhance the overall user experience.
+                    </p>
+                    <p>
+                        In our project, we also developed <b>a recommendation system to predict the potential popularity of songs</b> if they were streamed on the company's platform. 
+                        To accomplish this, we experimented with <b>several machine learning algorithms</b>, including Logistic Regression, GaussianNB, XGBoost, and Decision Tree.
+
+                        We utilized various input features to train our models, including song length, song genre, language, and target user characteristics 
+                        such as age, gender, and location. These features were selected based on their potential influence on song popularity.
+
+                        After training and evaluating the performance of the different algorithms, we found that XGBoost achieved the highest validation accuracy 
+                        among the models tested. Therefore, we selected XGBoost as the final model for our recommendation system.
+                    </p>
+                    <p>
+                        By leveraging the trained XGBoost model, the recommendation system can predict the likelihood of a song becoming popular on the platform 
+                        based on the provided inputs. This information can be <b>valuable for the company in deciding which songs to promote and stream, potentially 
+                        enhancing user engagement and increasing overall platform success</b>.
+
+                        By incorporating machine learning techniques and considering various input features, our recommendation system provides the company with 
+                        valuable insights for making informed decisions regarding song promotion and content curation on their platform.
+                    </p>
+
+                    <p>
+                        Project Prsentation Slides:
+                        <a href = 
+                        "https://github.com/minkhant1996/Business-Intelligence-System-for-Music-Streaming-Platform/blob/main/BIA%20Final%20Presentation.pdf">
+                        Business intelligence system for Music Streaming Platform Slides
+                    </a>
+                    </p>
+                    <p>
+                        Project Report:
+                        <a href = 
+                        "https://github.com/minkhant1996/Business-Intelligence-System-for-Music-Streaming-Platform/blob/main/BIA%20Report_%20Group%207%20Project.pdf">
+                        Business intelligence system for Music Streaming Platform Report
+                    </a>
+                    </p>
+                </section>
+
+                <section id="auto_transport">
+                    <h2>Automatic Transport Vehicle</h2>
+                    <p>
+                        This project, undertaken as part of the microprocessor class during my bachelor's study, 
+                        <b>focused on controlling the direction of a mobile robot and displaying its status on an LCD screen</b>.
+
+                        To achieve this, our team utilized <b>MATLAB Simulink code with Waijung blocks</b> to control <b>the microprocessor, 
+                        specifically the STM32F417IV</b>. This microprocessor facilitated the control of output devices such as motors and 
+                        the LCD screen of the mobile robot.
+
+                        By implementing the Simulink code and integrating it with the microprocessor, we were able to effectively control 
+                        the movement and direction of the robot. Additionally, the LCD screen provided real-time status updates, allowing for 
+                        easy monitoring and understanding of the robot's actions.
+                    </p>
+                    <p>
+                        This project showcased our proficiency in microprocessor programming and demonstrated our ability to interface with external 
+                        devices to control the behavior of a mobile robot. The successful implementation of this project contributed to our understanding 
+                        of embedded systems and their applications in robotics.
+
+                        Overall, this project served as a practical application of microprocessor concepts and highlighted our team's ability to 
+                        design and implement control systems for mobile robots using MATLAB Simulink and microprocessors like the STM32F417IV.
+                    </p>
+                    <p>
+                        Project Report:
+                        <a href = 
+                        "https://github.com/minkhant1996/Mechatronics-Project/blob/main/Developing%20IoT-Controlled%20robot%20movement%20with%20ESP8266%20and%20Blynk.pdf">
+                        Automatic Transport Vehicle
+                    </a>
+                    </p>
+                    <p>
+                        Testing Video Records:
+                        <ul>
+                            <li>
+                                <a href = 
+                                "https://youtu.be/TFf1jO0tGvg">
+                                Direction Testing
+                                </a>
+                            </li>
+                            <li>
+                                <a href = 
+                                "https://youtu.be/l9W0RsvCxd0">
+                                LCD Testing
+                                </a>
+                            </li>
+                            <li>
+                                <a href = 
+                                "https://youtu.be/ucCGpup-DiY">
+                                Pause Testing
+                                </a>
+                            </li>
+                        </ul>
+                    </p>
+
+                </section>
+
+                <section id="auto_coin_sort">
+                    <h2>Automatic Coin Sorting Machine</h2>
+                    <p>
+                        This project involved the development of a coin sorting machine model using <b>PLC (Programmable Logic Controller)</b> 
+                        and <b>HMI (Human Machine Interface)</b> devices as part of the mechatronic engineering laboratory in my bachelor's study.
+
+                        The backend system was designed using <b>Ladder Programming</b>, allowing for efficient control and automation of the coin sorting process. 
+                        The PLC played a crucial role in accurately counting the number of each Thai coin inserted into the machine.
+
+                        On the front-end, an <b>HMI application</b> was implemented to provide a user-friendly interface for interacting with the coin sorting machine. 
+                        The HMI allowed users to input coins and view the count of each coin type, enhancing the overall user experience.
+                    </p>
+                    <p>
+                        By combining PLC and HMI technologies, this project showcased my ability to integrate hardware and software components in mechatronic 
+                        systems. The coin sorting machine model served as a practical application of automation and control techniques, contributing
+                         to the field of mechatronic engineering.
+
+                        Overall, this project demonstrated my proficiency in designing and implementing a coin sorting machine using PLC and 
+                        HMI devices, providing an efficient and user-friendly solution for counting Thai coins.
+                    </p>
+
+                    <p>
+                        Project Report:
+                        <a href = 
+                        "https://github.com/minkhant1996/Mechatronics-Project/blob/main/Automatic%20Coin%20Sorting%20Machine.pdf">
+                        Automatic Coin Sorting Machine Report
+                    </a>
+                    </p>
+                </section>
+
+                <section id="senior_proj">
+                    <h2>Intermediate Model-Based Design Training Program with VCU using MPC5744P</h2>
+                    <p>
+                        In my <b>senior project</b> as a mechatronics student at Assumption University, our team, consisting of three engineering students, 
+                        undertook this project under the guidance and supervision of <b>Asst. Prof. Dr. Narong Aphiratsakun</b>, who serves as the Dean of 
+                        the Vincent Mary School of Engineering at Assumption University of Thailand. With his expertise and guidance, we were able to successfully 
+                        complete our senior project and achieve our objectives. 
+                        Dr. Narong Aphiratsakun's mentorship and support played a crucial role in the successful execution of our project.
+                    </p>
+                    <p>
+                        This senior project, conducted in collaboration with <b>Mine Mobility Research Company</b>, a subsidiary of Energy Absolute Thailand, 
+                        and <b>Assumption University of Thailand</b>, aimed to <b>develop a training course using a model-based design system with an industry-grade 
+                        vehicle control unit (VCU) that uses an MPC5744P microcontroller board</b>.
+
+                        The primary objective of this project was to enhance the skills and knowledge of engineering students at Assumption University and 
+                        workers at the company in VCU control. The <b>training program consisted of seven topics</b>, covering various aspects of VCU control, 
+                        including flashing the MPC5744P bootloader, digital and analog input/output control, timer and alarm configuration, DC stepper motor 
+                        control, Controller Area Network (CAN) communication, brushed DC motor control, and electric vehicle DC-DC converter control.
+                    </p>
+                    <p>
+                        The entire program was designed using <b>MATLAB Simulink codes</b>, allowing participants to <b>gain hands-on experience and practical knowledge</b>. 
+                        The training began with learning how to control the devkit MPC5744P microcontroller board, and as participants became familiar with 
+                        the board, they progressed to practicing with the VCU. This practical experience provided participants with valuable skills for 
+                        future employment in the electrical vehicle industry.
+
+                        By collaborating with Mine Mobility Research Company and Assumption University, this senior project aimed to bridge the gap 
+                        between academic knowledge and industry requirements. The training program equipped participants with practical experience in VCU 
+                        control, preparing them for future roles in electrical vehicle companies. The project showcased our ability to design and deliver 
+                        a comprehensive training program, fostering the development of skilled professionals in the field.
+                    </p>
+
+                    <p>
+                        Project Report:
+                        <a href = 
+                        "https://github.com/minkhant1996/Intermediate-Model-Based-Design-Training-Program/blob/main/Intermediate%20Model-Based%20Design%20Training%20Program%20with%20VCU%20using%20MPC5744P_signed.pdf">
+                        Intermediate Model-Based Design Training Program with VCU using MPC5744P
+                    </a>
+                    </p>
+                </section>
+
+                
+            </div>
+            
+
+        </div>
+        </section>
+    </body>
+</html>
