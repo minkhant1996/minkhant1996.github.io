@@ -2,3 +2,5 @@
 @media(max-width:800px){.subpage-hero{padding:70px 0 55px}.subpage-main{padding:65px 0 95px}.subpage-section{padding-bottom:75px}.detail-grid{grid-template-columns:1fr;gap:8px}.case-grid,.contact-options{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.subpage-nav{gap:12px;flex-wrap:wrap;font-size:11px}.subpage-header .header-inner{height:auto;min-height:78px;align-items:flex-start;flex-direction:column;padding-top:14px;padding-bottom:15px;gap:10px}.subpage-nav{margin-left:0}.list-card{grid-template-columns:1fr;gap:6px}.list-card .list-date{order:-1}}
 .case-card h3,.case-card .case-kicker{font-family:Manrope,Arial,sans-serif}
 .credential-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;font-size:13px;font-weight:800}.credential-links a{color:#376c41;text-decoration:underline;text-underline-offset:3px}
+
+.experience-page .detail-body strong em{color:#284b34;font-weight:800;font-style:italic}
